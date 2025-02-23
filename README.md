@@ -31,10 +31,12 @@ git clone <git@github.com:RaulPovedano/02-upload-data.git>
 cd 02-upload-data
 
 ```
-
 2. Levantar Proyecto:
 
 ```bash
 docker-compose up --build
 ```
+3. La aplicacion estara disponible:
+
+- URL: http://localhost:4000
 
