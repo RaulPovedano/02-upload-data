@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload de Archivos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+  <div class="bg-white p-8 shadow-lg rounded-lg w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-4 text-center">Subir Archivo</h1>
+    <form id="uploadForm" class="flex flex-col gap-4" enctype="multipart/form-data">
+      <input type="file" name="file" required class="border border-gray-300 rounded-lg p-2"/>
+      <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"> Subir Archivo</button>
+    </form>
+
+    <h2 class="text-xl font-semibold mt-6 mb-2">Archivos Subidos</h2>
+    <ul id="fileList" class="space-y-2"></ul>
+  </div>
+
+  <script type="module" src="./scripts/main.js"></script>
+
+  <div class="text-center w-full">
+    <h2 class="text-3xl font-bold mb-4">Espacio Disponible</h2>
+    <div id="chart" class="flex justify-center"></div>
+  </div>
+  <button type="button" id="deleteTrash" class="absolute top-4 right-4 bg-red-500 hover:bg-red-800 text-white px-4 py-2 text-lg rounded-lg">Vaciar Papelera</button>
+
+  <form id="emailForm" class="flex flex-col gap-4">
+    <input 
+      id="email"
+      type="email" 
+      name="email" 
+      placeholder="Introduce tu correo" 
+      required 
+      class="border border-gray-300 rounded-lg p-2"
+    />
+    <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Enviar Resumen</button>
+  </form>
+
+  <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
